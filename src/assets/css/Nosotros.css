@@ -1,0 +1,10 @@
+.nosotros-title {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.nosotros-card {
+    width: 12rem;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}

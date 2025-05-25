@@ -1,35 +1,32 @@
+import { Container } from "react-bootstrap"
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Router, Routes, Route } from "react-router-dom"
+import Layout from "./assets/components/Layout"
+import ErrorPage from "./assets/components/ErrorPage"
+import Nosotros from "./assets/components/Nosotros"
+import Home from "./assets/components/Home"
+import ListaAlumnos from "./assets/components/alumno/ListaAlumno"
+import AlumnoForm from "./assets/components/alumno/AlumnoForm"
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <Container>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="home" element={<Home />} />
+          <Route path="alumnos" element={<ListaAlumnos />} />
+          <Route path="alumno/nuevo" element={<AlumnoForm />} />
+          <Route path="nosotros" element={<Nosotros />} />
+          <Route path="*" element={ <ErrorPage />} />
+        </Route>
+      </Routes>
+    </Container>
   )
+
 }
 
 export default App
