@@ -1,0 +1,21 @@
+.home-container {
+    margin-top: 3rem;
+}
+.home-card {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+.home-title {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.home-lead {
+    text-align: center;
+}
+.home-list {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.home-footer {
+    text-align: center;
+    margin-top: 2rem;
+}
