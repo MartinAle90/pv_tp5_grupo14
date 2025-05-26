@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Card, Button, Row, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
-
+/*
 export const alumnos = [
     {
         id: 1,
@@ -27,11 +27,11 @@ export const alumnos = [
         estado: false,
     }
 ];
+*/
 
-
-function ListaAlumnos() {
+function ListaAlumnos({alumnos, setAlumnos}) {
     const navigate = useNavigate();
-
+    /*
     const [alumnos, setAlumnos] = useState([
         {
             id: 1,
@@ -56,13 +56,15 @@ function ListaAlumnos() {
             estado: false,
         }
     ]);
-
+    */
     const eliminarAlumno = (id) => {
         const alumno = alumnos.find(a => a.id === id);
         const confirmar = window.confirm(`¿Está seguro que desea eliminar a ${alumno.nombre} ${alumno.apellido}?`);
         if (confirmar) {
             const nuevaLista = alumnos.filter(alumno => alumno.id !== id);
             setAlumnos(nuevaLista);
+            localStorage.setItem("alumnos", JSON.stringify(nuevaLista));
+
         }
     };
 

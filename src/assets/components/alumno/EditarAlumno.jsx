@@ -7,7 +7,7 @@ function EditarAlumno({ alumnos, actualizarAlumno }) {
     const navigate = useNavigate();
     const alumnoId = parseInt(id);
 
-    const alumnoExistente = alumnos.find(a => a.id === alumnoId);
+    const alumnoExistente = alumnos.find((a) => a.id === alumnoId);
     const [alumno, setAlumno] = useState({});
 
     useEffect(() => {
@@ -17,7 +17,7 @@ function EditarAlumno({ alumnos, actualizarAlumno }) {
         } else {
             setAlumno(alumnoExistente);
         }
-    }, [alumnoExistente]);
+    }, [alumnoExistente, navigate]);
 
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
