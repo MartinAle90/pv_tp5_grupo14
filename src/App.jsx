@@ -2,12 +2,12 @@ import { Container } from "react-bootstrap"
 import { useState } from 'react'
 import { Router, Routes, Route } from "react-router-dom"
 import Layout from "./assets/components/Layout"
-import ErrorPage from "./assets/components/ErrorPage"
+import InformacionDelAlumno from "./assets/components/InformacionDelAlumno"
 import Nosotros from "./assets/components/Nosotros"
 import Home from "./assets/components/Home"
 import ListaAlumnos from "./assets/components/alumno/ListaAlumno"
 import AlumnoForm from "./assets/components/alumno/AlumnoForm"
-
+import ErrorPage from "./assets/components/ErrorPage"
 
 
 function App() {
@@ -21,7 +21,8 @@ function App() {
           <Route path="alumnos" element={<ListaAlumnos />} />
           <Route path="alumno/nuevo" element={<AlumnoForm />} />
           <Route path="nosotros" element={<Nosotros />} />
-          <Route path="*" element={ <ErrorPage />} />
+          <Route path="alumnos/:id" element={ <InformacionDelAlumno />} />
+          <Route path="*" element={<ErrorPage />} />
         </Route>
       </Routes>
     </Container>

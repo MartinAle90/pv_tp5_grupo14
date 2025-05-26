@@ -1,7 +1,7 @@
 import { Card, Button, Row, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
-const alumnos = [
+export const alumnos = [
     {
         id: 1,
         lu: "APU00999",
@@ -40,10 +40,6 @@ function ListaAlumnos() {
                                 <Card.Title>{alumno.nombre} {alumno.apellido}</Card.Title>
                                 <Card.Text>
                                     <strong>LU:</strong> {alumno.lu}<br />
-                                    <strong>Curso:</strong> {alumno.curso}<br />
-                                    <strong>Email:</strong> {alumno.email}<br />
-                                    <strong>Domicilio:</strong> {alumno.domicilio}<br />
-                                    <strong>Teléfono:</strong> {alumno.telefono}<br />
                                     <strong>Estado:</strong> {alumno.estado ? "Activo" : "Inactivo"}
                                 </Card.Text>
                                 <Button
