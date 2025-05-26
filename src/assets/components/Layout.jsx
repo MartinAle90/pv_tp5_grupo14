@@ -10,10 +10,11 @@ function Layout() {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto">
-                            <Nav.Link href="/">Inicio</Nav.Link>
+                            <Nav.Link href="/">Inicio</Nav.Link> 
                             <Nav.Link href="/alumnos">Lista de Alumnos</Nav.Link>
                             <Nav.Link href="/alumno/nuevo">Nuevo Alumno</Nav.Link>
-                            <Nav.Link href="/nosotros">Acerca de</Nav.Link>
+                            <Nav.Link href="/nosotros">Acerca de</Nav.Link> 
+
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
