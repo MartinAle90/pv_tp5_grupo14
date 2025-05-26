@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 
@@ -68,6 +69,7 @@ function AlumnoForm() {
       <Button type="submit">Guardar</Button>
     </Form>
   );
+
 }
 
 export default AlumnoForm;
