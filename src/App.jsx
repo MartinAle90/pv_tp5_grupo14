@@ -7,6 +7,8 @@ import Nosotros from "./assets/components/Nosotros"
 import Home from "./assets/components/Home"
 import ListaAlumnos from "./assets/components/alumno/ListaAlumno"
 import AlumnoForm from "./assets/components/alumno/AlumnoForm"
+import EditarAlumno from "./assets/components/alumno/EditarAlumno";
+
 
 
 
@@ -20,6 +22,7 @@ function App() {
           <Route path="home" element={<Home />} />
           <Route path="alumnos" element={<ListaAlumnos />} />
           <Route path="alumno/nuevo" element={<AlumnoForm />} />
+          <Route path="alumnos/:id/editar" element={<EditarAlumno />} />
           <Route path="nosotros" element={<Nosotros />} />
           <Route path="*" element={ <ErrorPage />} />
         </Route>
