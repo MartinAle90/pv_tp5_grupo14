@@ -6,5 +6,20 @@
 .nosotros-card {
     width: 12rem;
     text-align: center;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    background-color: #F2EFE7;
+}
+
+.nosotros-avatar {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 1rem auto 0;
+  display: block;
+}
+
+.nosotros-card {
+  text-align: center;
+  padding-top: 1rem;
+  border: none;
 }

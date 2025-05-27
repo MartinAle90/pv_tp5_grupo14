@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from "react-router-dom";
-import { Button } from "react-bootstrap";
+import { Button, Container, ListGroup, Card, Col, Table, Row } from "react-bootstrap";
 
 function InformacionDeAlumno({alumnos}) {
   const { id } = useParams(); // agarra el id
@@ -15,24 +15,57 @@ function InformacionDeAlumno({alumnos}) {
   }
 
   return (
-    <>
-      <h1>Informacion sobre el alumno</h1>
-      <div>Número de id registrado en la página: {alumno.id}</div>
-      <div>Libreta Universitaria: {alumno.lu}</div>
-      <div>Nombre: {alumno.nombre}</div>
-      <div>Apellido: {alumno.apellido}</div>
-      <div>Año que está cursando: {alumno.curso}</div>
-      <div>Email: {alumno.email}</div>
-      <div>Domicilio: {alumno.domicilio}</div>
-      <div>Teléfono: {alumno.telefono}</div>
-      <div>Estado: {alumno.estado ? "Activo" : "Inactivo"}</div>
-      
-      
+ <Container className="my-4 text-center">
+  <Card>
+    <Card.Header as="h4">Información del Alumno</Card.Header>
+    <Card.Body className="text-start">
+      <Row className="mb-3 align-center">
+        <Col md={4}>
+          <strong>ID:</strong> {alumno.id}
+        </Col>
+        <Col md={4}>
+          <strong>LU:</strong> {alumno.lu}
+        </Col>
+        <Col md={4}>
+          <strong>Nombre:</strong> {alumno.nombre}
+        </Col>
+      </Row>
 
-      <Button variant="secondary" onClick={() => navigate("/alumnos")}>
-        Volver a la lista
-      </Button>
-    </>
+      <Row className="mb-3">
+        <Col md={4}>
+          <strong>Apellido:</strong> {alumno.apellido}
+        </Col>
+        <Col md={4}>
+          <strong>Curso:</strong> {alumno.curso}
+        </Col>
+        <Col md={4}>
+          <strong>Email:</strong> {alumno.email}
+        </Col>
+      </Row>
+
+      <Row className="mb-3">
+        <Col md={4}>
+          <strong>Domicilio:</strong> {alumno.domicilio}
+        </Col>
+        <Col md={4}>
+          <strong>Teléfono:</strong> {alumno.telefono}
+        </Col>
+        <Col md={4}>
+          <strong>Estado:</strong> {alumno.estado ? "Activo" : "Inactivo"}
+        </Col>
+      </Row>
+    </Card.Body>
+  </Card>
+
+  <Button className="mt-3" variant="secondary" onClick={() => navigate("/alumnos")}>
+    Volver a la lista
+  </Button>
+</Container>
+
+
+
+
+
   );
 }
 
