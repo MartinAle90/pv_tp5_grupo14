@@ -16,25 +16,25 @@ function Layout() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-            <Nav.Link href="/" className="nav-link text-secondary text-center">
-              <BsFillHouseDoorFill size={24} className="d-block mx-auto mb-1" />
-              Home
-            </Nav.Link>
+              <Nav.Link href="/" className="nav-link text-secondary text-center">
+                <BsFillHouseDoorFill size={24} className="d-block mx-auto mb-1" />
+                Home
+              </Nav.Link>
 
-            <Nav.Link href="/alumnos" className="nav-link text-center">
-              <BsFillPersonLinesFill size={24} className="d-block mx-auto mb-1" />
-              Alumnos
-            </Nav.Link>
+              <Nav.Link href="/alumnos" className="nav-link text-center">
+                <BsFillPersonLinesFill size={24} className="d-block mx-auto mb-1" />
+                Alumnos
+              </Nav.Link>
 
-            <Nav.Link href="/alumno/nuevo" className="nav-link text-center">
-              <BsFillPersonPlusFill size={24} className="d-block mx-auto mb-1" />
-              Nuevo Alumno
-            </Nav.Link>
+              <Nav.Link href="/alumno/nuevo" className="nav-link text-center">
+                <BsFillPersonPlusFill size={24} className="d-block mx-auto mb-1" />
+                Nuevo Alumno
+              </Nav.Link>
 
-            <Nav.Link href="/nosotros" className="nav-link text-center">
-              <BsFillInfoCircleFill size={24} className="d-block mx-auto mb-1" />
-              Acerca de
-            </Nav.Link>
+              <Nav.Link href="/nosotros" className="nav-link text-center">
+                <BsFillInfoCircleFill size={24} className="d-block mx-auto mb-1" />
+                Acerca de
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
